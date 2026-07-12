@@ -5,8 +5,9 @@
       "root": "blueprint",
       "source": { "type": "dir" },
       "pageMode": "chapter",
-      "lakeRoots": ["Ch01_SumsOfOddNumbers"],
-      "repo": "self-evolving/lean-workspace-template"
+      "lakeRoots": ["BrownianMotion"],
+      "leanSrcDirs": [".lake/packages/BrownianMotion"],
+      "repo": "RemyDegenne/brownian-motion"
     }
   ]
 }
