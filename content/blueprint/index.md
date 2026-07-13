@@ -25,8 +25,10 @@ npm run blueprint:sync        # extract kernel truth + regenerate the canvas
 
 The original leanblueprint site remains at
 [remydegenne.github.io/brownian-motion/blueprint](https://remydegenne.github.io/brownian-motion/blueprint/).
-This workspace starts with a scaffold chapter on the construction of Brownian
-motion; the remaining chapters are being migrated. Note that items the
-upstream blueprint marks `\mathlibok` (theory already upstreamed to mathlib,
-e.g. the Gaussian-measure chapter) refer to declarations outside this
-library's modules, which the extractor does not currently walk.
+All 15 chapters are migrated as native chapters (620 items), spanning two
+parts: the construction of Brownian motion, and the stochastic integral in
+progress. Note that items the upstream blueprint marks `\mathlibok` (theory
+already upstreamed to mathlib) refer to declarations outside this library's
+modules, which the extractor does not currently walk — they render without a
+kernel status until the extractor learns to resolve named declarations from
+dependencies.
