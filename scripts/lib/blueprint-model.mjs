@@ -92,6 +92,63 @@ export function repoRelativePath(repoRoot, absPath) {
   return rel.split(path.sep).join("/")
 }
 
+// The repository THIS workspace is hosted in (for links to files that live
+// here, e.g. chapter sources) — distinct from cfg.repo, which is the project
+// repository that receives discussion links and, in companion mode, is a
+// different upstream repository entirely.
+let cachedWorkspaceRepo
+export function workspaceRepo(repoRoot) {
+  if (cachedWorkspaceRepo !== undefined) return cachedWorkspaceRepo
+  cachedWorkspaceRepo = null
+  try {
+    const url = execFileSync("git", ["remote", "get-url", "origin"], {
+      cwd: repoRoot,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim()
+    const m = url.match(/github\.com[:/]+([^/\s]+\/[^/\s]+?)(?:\.git)?$/)
+    if (m) cachedWorkspaceRepo = m[1]
+  } catch {}
+  return cachedWorkspaceRepo
+}
+
+let cachedManifest = null
+function manifestPackages(repoRoot) {
+  if (cachedManifest && cachedManifest.root === repoRoot) return cachedManifest.pkgs
+  let pkgs = []
+  try {
+    const m = JSON.parse(fs.readFileSync(path.join(repoRoot, "lake-manifest.json"), "utf8"))
+    pkgs = (m.packages ?? []).filter((p) => p.name && p.url && p.rev)
+  } catch {}
+  cachedManifest = { root: repoRoot, pkgs }
+  return pkgs
+}
+
+// True source of a snippet: when it resolves inside a Lake package checkout
+// (.lake/packages/<name>) or a vendored copy of one (decl file paths start
+// with the package's module root, which for adopted-project layouts equals
+// the package name), the honest link target is the upstream repository at the
+// manifest's pinned revision — not this repository's copy at its own HEAD.
+export function packageSourceRef(repoRoot, snippet) {
+  if (!repoRoot || !snippet?.file) return null
+  const pkgs = manifestPackages(repoRoot)
+  if (!pkgs.length) return null
+  const file = String(snippet.file).replace(/\\/g, "/")
+  const baseName = snippet.baseDir ? path.basename(snippet.baseDir) : null
+  const inLake = snippet.baseDir
+    ? String(snippet.baseDir).includes(`.lake${path.sep}packages`)
+    : false
+  const pkg =
+    (inLake && pkgs.find((p) => p.name === baseName)) || pkgs.find((p) => p.name === file.split("/")[0])
+  if (!pkg) return null
+  const repo = String(pkg.url)
+    .trim()
+    .replace(/\.git$/, "")
+    .replace(/^https:\/\/github\.com\//, "")
+  if (!/^[^/\s]+\/[^/\s]+$/.test(repo)) return null
+  return { repo, ref: pkg.rev, path: file }
+}
+
 export function githubSourceUrl(repo, repoPath, { ref = sourceRef(), startLine, endLine } = {}) {
   if (!repo || !repoPath) return null
   const normalizedRepo = String(repo)
