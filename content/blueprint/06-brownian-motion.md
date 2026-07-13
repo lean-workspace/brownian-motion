@@ -236,8 +236,6 @@ The Wiener measure on $C(\mathbb{R}_+, \mathbb{R})$ with the Borel sigma-algebra
 TODO: add the main properties of the Brownian motion and the Wiener measure.
 We need to be able to tell that we have built the correct objects.
 
-\putbib
-
 **Overview**
 
 We describe the construction of a stochastic integral.

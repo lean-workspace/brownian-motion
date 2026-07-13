@@ -55,7 +55,7 @@ $$
 **Gaussian measures on a Banach space**
 
 That kind of generality is not needed for this project, but we happen to have results about Gaussian measures on a Banach space in Mathlib, so we will use them.
-The main reference for this section is [hairer2009introduction].
+The main reference for this section is [@hairer2009introduction].
 
 Let $F$ be a separable Banach space.
 

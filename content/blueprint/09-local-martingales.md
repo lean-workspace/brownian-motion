@@ -7,7 +7,7 @@ tags:
 
 **Local properties**
 
-This section contains material taken mostly from [kallenberg2021, Chapters 10 and 18] and [almostsuremath].
+This section contains material taken mostly from [@kallenberg2021, Chapters 10 and 18] and [@almostsuremath].
 
 ## Definition: preLocalizingSequence {#def:preLocalizingSequence lean="ProbabilityTheory.IsPreLocalizingSequence" uses="def:IsStoppingTime"}
 

@@ -6,7 +6,7 @@ tags:
 ---
 
 This chapter starts with the derivation of a Komlòs lemma, which is a useful tool to extract converging subsequences from bounded sequences of functions.
-Then, we give a short review of the properties of the Doob decomposition of an adapted process indexed on a discrete set, and then follows [Beiglböck_Schachermayer_Veliyev_2012] which gives an elementary and short proof of the Doob-Meyer theorem.
+Then, we give a short review of the properties of the Doob decomposition of an adapted process indexed on a discrete set, and then follows [@Beiglbock_Schachermayer_Veliyev_2012] which gives an elementary and short proof of the Doob-Meyer theorem.
 
 **Komlòs Lemma**
 

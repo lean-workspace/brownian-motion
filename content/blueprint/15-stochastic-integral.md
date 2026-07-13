@@ -5,8 +5,8 @@ tags:
   - "blueprint"
 ---
 
-The lecture notes at \href{https://dec41.user.srcf.net/h/III_L/stochastic_calculus_and_applications/}{this link} as well as chapter 18 of [kallenberg2021] are good references for this chapter.
-Some of the proofs are taken from [pascucci2024].
+The lecture notes at \href{https://dec41.user.srcf.net/h/III_L/stochastic_calculus_and_applications/}{this link} as well as chapter 18 of [@kallenberg2021] are good references for this chapter.
+Some of the proofs are taken from [@pascucci2024].
 
 **Stochastic integral**
 
@@ -294,6 +294,4 @@ $$
 $$
 
 ### Proof {uses="thm:integration_by_parts"}
-
-\putbib
 

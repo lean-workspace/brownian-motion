@@ -7,8 +7,8 @@ tags:
 
 **Choquet's capacitability theorem**
 
-This section is devoted to the proof of Choquet's capacitability theorem, which is a key ingredient in the proof of the debut theorem. The presentation follows [bichteler2002stochastic] for the definition of analytic sets (that definition changes a lot between sources) and for the general proof steps, and [he2019semimartingale] and the PlanetMath website for many of the proofs of individual lemmas.
-Although the definition of analytic sets in [he2019semimartingale] is different, the proofs follow the same general steps and the same ideas, and that book is much more detailed than [bichteler2002stochastic].
+This section is devoted to the proof of Choquet's capacitability theorem, which is a key ingredient in the proof of the debut theorem. The presentation follows [@bichteler2002stochastic] for the definition of analytic sets (that definition changes a lot between sources) and for the general proof steps, and [@he2019semimartingale] and the PlanetMath website for many of the proofs of individual lemmas.
+Although the definition of analytic sets in [@he2019semimartingale] is different, the proofs follow the same general steps and the same ideas, and that book is much more detailed than [@bichteler2002stochastic].
 
 **Pavings and Compact systems**
 

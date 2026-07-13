@@ -5,8 +5,8 @@ tags:
   - "blueprint"
 ---
 
-We follow the proof of the Kolmogorov-Chentsov theorem from [kratschmer2023kolmogorov].
-That proof notably uses the chaining technique developed by Talagrand [talagrand2022upper].
+We follow the proof of the Kolmogorov-Chentsov theorem from [@kratschmer2023kolmogorov].
+That proof notably uses the chaining technique developed by Talagrand [@talagrand2022upper].
 
 That theorem is about stochastic processes $X : T \to \Omega \to E$, where $\Omega$ is a measurable space with a probability measure $\mathbb{P}$, the index set $T$ is a metric space with distance $d_T$, and $E$ is also a metric space with distance $d_E$, on which we put the Borel $\sigma$-algebra.
 
@@ -597,7 +597,7 @@ $$
 $$
 
 Remark: the measurability condition on the pair would be implied by the measurability of $X_t$ for all $t \in T$ if we assumed that $E$ is separable (`SecondCountableTopology` in Lean), which implies that the Borel $\sigma$-algebra on the product is equal to the product of the Borel $\sigma$-algebras.
-We follow [kratschmer2023kolmogorov] and do not require separability.
+We follow [@kratschmer2023kolmogorov] and do not require separability.
 
 ## Lemma: IsKolmogorovProcess.edist_eq_zero {#lem:IsKolmogorovProcess.edist_eq_zero lean="ProbabilityTheory.IsAEKolmogorovProcess.edist_eq_zero" uses="def:IsKolmogorovProcess"}
 

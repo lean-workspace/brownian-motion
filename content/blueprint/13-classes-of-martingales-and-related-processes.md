@@ -5,7 +5,7 @@ tags:
   - "blueprint"
 ---
 
-The main reference for this part is [he2019semimartingale].
+The main reference for this part is [@he2019semimartingale].
 
 Notations for classes of processes:
 
@@ -13,12 +13,12 @@ Notations for classes of processes:
 - $\mathcal{V}^+$: non-decreasing finite variation processes
 - $\mathcal{A}$: adapted processes with integrable variation ([Integrable variation, $\mathcal{A}$](#def:HasIntegrableVariation))
 - $\mathcal{A}^+$: non-decreasing adapted integrable processes
-- $\mathcal{M}$: càdlàg martingales (TODO: [he2019semimartingale] add uniform integrability)
+- $\mathcal{M}$: càdlàg martingales (TODO: [@he2019semimartingale] add uniform integrability)
 - $\mathcal{M}^c$: continuous martingales
 - $\mathcal{M}^2$: square-integrable martingales ([Square integrable martingales](#def:IsSquareIntegrable))
 - $\mathcal{C}_{\mathrm{loc}}$ for a class $\mathcal{C}$: processes that are locally in $\mathcal{C}$
 
-Note: [he2019semimartingale] use $\mathcal{W}$ for $\mathcal{M} \cap \mathcal{A}$.
+Note: [@he2019semimartingale] use $\mathcal{W}$ for $\mathcal{M} \cap \mathcal{A}$.
 
 **Jumps of a process**
 
@@ -441,7 +441,7 @@ Then for any $\varepsilon > 0$, $M$ can be decomposed as $M = M_0 + U + V$, wher
 
 ### Proof {uses="lem:IsLocalMartingale.locally_hasIntegrableVariation_largeJumps"}
 
-See  [he2019semimartingale], 7.17
+See  [@he2019semimartingale], 7.17
 
 Remark:
 $U$ is locally bounded, hence locally square integrable, so we can use the integration machinery for those to define an integral.

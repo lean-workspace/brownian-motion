@@ -35,6 +35,11 @@ the upstream blueprint:
 
 The blueprint prose is converted from the upstream LaTeX sources, licensed
 [Apache-2.0](UPSTREAM-LICENSE.txt); the Lean library itself is consumed as a
-pinned Lake dependency, not copied. The workspace machinery comes from the
-Lean Workspace template ([PolyForm Shield](LICENSE.txt), third-party notices
-in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).
+pinned Lake dependency. `vendor/upstream/` carries a copy of the pinned
+revision's `.lean` sources so deployed site builds can render declaration
+snippets without a Lake checkout — refresh it when bumping the pin. The
+mathematical references cited by the blueprint live in `bibliography.bib`
+(the upstream blueprint's `bib.bib`) and render as linked citations. The
+workspace machinery comes from the Lean Workspace template
+([PolyForm Shield](LICENSE.txt), third-party notices in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).
