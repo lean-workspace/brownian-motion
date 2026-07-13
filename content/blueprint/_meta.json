@@ -1,4 +1,7 @@
 {
   "label": "Brownian Motion blueprint",
-  "pages": ["01-gaussian-measures"]
+  "pages": [
+    { "page": "dep-graph", "type": "canvas", "title": "Dependency canvas" },
+    "01-brownian-motion"
+  ]
 }

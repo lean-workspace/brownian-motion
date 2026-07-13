@@ -1,0 +1,174 @@
+{
+  "nodes": [
+    {
+      "id": "def-prebrownian",
+      "type": "file",
+      "file": "blueprint/01-brownian-motion.md",
+      "subpath": "#defprebrownian",
+      "x": 207,
+      "y": 0,
+      "width": 192,
+      "height": 64,
+      "color": "#B0ECA3",
+      "bpTitle": "Definition 1.1 · pre-Brownian process",
+      "bpKind": "Definition 1.1",
+      "bpName": "pre-Brownian process",
+      "bpStatus": "statement ✓"
+    },
+    {
+      "id": "lem-isgaussianprocess-prebrownian",
+      "type": "file",
+      "file": "blueprint/01-brownian-motion.md",
+      "subpath": "#lemisgaussianprocess_prebrownian",
+      "x": 0,
+      "y": 107,
+      "width": 192,
+      "height": 82,
+      "color": "#1CAC78",
+      "bpTitle": "Lemma 1.2 · The pre-Brownian process is Gaussian",
+      "bpKind": "Lemma 1.2",
+      "bpName": "The pre-Brownian process is Gaussian",
+      "bpStatus": "fully formalized"
+    },
+    {
+      "id": "def-brownian",
+      "type": "file",
+      "file": "blueprint/01-brownian-motion.md",
+      "subpath": "#defbrownian",
+      "x": 290,
+      "y": 116,
+      "width": 151,
+      "height": 64,
+      "color": "#B0ECA3",
+      "bpTitle": "Definition 1.3 · Brownian motion",
+      "bpKind": "Definition 1.3",
+      "bpName": "Brownian motion",
+      "bpStatus": "statement ✓"
+    },
+    {
+      "id": "lem-isholderwith-brownian",
+      "type": "file",
+      "file": "blueprint/01-brownian-motion.md",
+      "subpath": "#lemisholderwith_brownian",
+      "x": 96,
+      "y": 232,
+      "width": 274,
+      "height": 64,
+      "color": "#1CAC78",
+      "bpTitle": "Lemma 1.4 · Hölder continuity of the paths",
+      "bpKind": "Lemma 1.4",
+      "bpName": "Hölder continuity of the paths",
+      "bpStatus": "fully formalized"
+    },
+    {
+      "id": "lem-continuous-brownian",
+      "type": "file",
+      "file": "blueprint/01-brownian-motion.md",
+      "subpath": "#lemcontinuous_brownian",
+      "x": 403,
+      "y": 232,
+      "width": 217,
+      "height": 64,
+      "color": "#1CAC78",
+      "bpTitle": "Lemma 1.5 · Continuity of the paths",
+      "bpKind": "Lemma 1.5",
+      "bpName": "Continuity of the paths",
+      "bpStatus": "fully formalized"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "fromNode": "def-prebrownian",
+      "fromSide": "bottom",
+      "toNode": "lem-isgaussianprocess-prebrownian",
+      "toSide": "top",
+      "dashed": true
+    },
+    {
+      "id": "e1",
+      "fromNode": "def-prebrownian",
+      "fromSide": "bottom",
+      "toNode": "def-brownian",
+      "toSide": "top",
+      "dashed": true
+    },
+    {
+      "id": "e2",
+      "fromNode": "def-brownian",
+      "fromSide": "bottom",
+      "toNode": "lem-isholderwith-brownian",
+      "toSide": "top",
+      "dashed": true
+    },
+    {
+      "id": "e3",
+      "fromNode": "def-prebrownian",
+      "fromSide": "bottom",
+      "toNode": "lem-isholderwith-brownian",
+      "toSide": "top",
+      "color": "6"
+    },
+    {
+      "id": "e4",
+      "fromNode": "def-brownian",
+      "fromSide": "bottom",
+      "toNode": "lem-continuous-brownian",
+      "toSide": "top",
+      "dashed": true
+    },
+    {
+      "id": "e5",
+      "fromNode": "def-prebrownian",
+      "fromSide": "bottom",
+      "toNode": "lem-continuous-brownian",
+      "toSide": "top",
+      "color": "6"
+    }
+  ],
+  "legend": {
+    "title": "Formalization status (kernel-computed)",
+    "nodes": [
+      {
+        "color": "#1CAC78",
+        "label": "fully formalized (proof + all ancestors)"
+      },
+      {
+        "color": "#9CEC8B",
+        "label": "proof formalized"
+      },
+      {
+        "color": "#FCD34D",
+        "label": "in progress (proof contains sorry)"
+      },
+      {
+        "color": "#B0ECA3",
+        "label": "statement formalized"
+      },
+      {
+        "color": "#A3D6FF",
+        "label": "ready to formalize (proof)"
+      },
+      {
+        "color": "#3b82f6",
+        "label": "ready to formalize (statement)"
+      },
+      {
+        "color": null,
+        "label": "not ready"
+      }
+    ],
+    "edges": [
+      {
+        "dashed": true,
+        "label": "uses (statement)"
+      },
+      {
+        "dashed": false,
+        "color": "6",
+        "label": "uses (proof)"
+      }
+    ],
+    "note": "Statuses are computed from the Lean kernel (lake exe blueprint-data). Hover a card to highlight its direct dependencies; click a title to open it in its chapter."
+  }
+}
