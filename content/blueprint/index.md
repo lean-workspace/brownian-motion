@@ -12,6 +12,13 @@ the Lean 4 formalization of standard Brownian motion (Gaussian projective
 families, the Kolmogorov extension theorem, and a Kolmogorov-Chentsov
 continuity theorem), now extended toward stochastic integration.
 
+The mathematics is the work of the upstream project — blueprint by Rémy
+Degenne and Peter Pfaffelhuber; formalization by Rémy Degenne, Markus Himmel,
+David Ledvinka, Etienne Marion, and Peter Pfaffelhuber, with additional
+contributions from Jonas Bayer, Lorenzo Loccioli, Pietro Monticone, Alessio
+Rondelli, and Jérémy Scanvic. The prose here is converted from the upstream
+LaTeX sources (Apache-2.0).
+
 The Lean code lives upstream and is pinned as a Lake dependency; chapters here
 are reference chapters whose items point at upstream declarations with
 `lean="..."`. Statuses, dependency edges, and source snippets are recomputed
