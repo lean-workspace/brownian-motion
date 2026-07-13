@@ -173,8 +173,16 @@ in which $L^\dagger : F \to E$ is the adjoint of $L$.
 ### Proof {uses="lem:covInnerBilin_map"}
 
 On the left-hand side we have
-  $$\langle e_i, \Sigma_{L_*\mu} e_j\rangle = C'_{L_*\mu}(e_i, e_j) = C'_\mu(L^\dagger(e_i), L^\dagger(e_j)),$$
+  
+$$
+\langle e_i, \Sigma_{L_*\mu} e_j\rangle = C'_{L_*\mu}(e_i, e_j) = C'_\mu(L^\dagger(e_i), L^\dagger(e_j)),
+$$
+
   where the last equality comes from [covInnerBilin_map](#lem:covInnerBilin_map). On the right-hand side we have
-  $$\langle L^\dagger(e_i), \Sigma_{L_*\mu} L^\dagger(e_j)\rangle = C'_\mu(L^\dagger(e_i), L^\dagger(e_j)),$$
+  
+$$
+\langle L^\dagger(e_i), \Sigma_{L_*\mu} L^\dagger(e_j)\rangle = C'_\mu(L^\dagger(e_i), L^\dagger(e_j)),
+$$
+
   which concludes the proof.
 

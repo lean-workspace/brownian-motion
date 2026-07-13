@@ -238,13 +238,29 @@ This is the characteristic function of a Gaussian measure on $\mathbb{R}$ with m
 By [ext_of_charFun](#thm:ext_of_charFun), $\langle u, \cdot\rangle_*\mu$ is Gaussian, hence $\mu$ is Gaussian.
 
 By [IsGaussian.charFun_eq](#lem:IsGaussian.charFun_eq), we deduce that for any $t \in E$ we have
-$$\exp\left(i\langle t, m \rangle - \frac{1}{2} C(t, t)\right) = \exp\left(i\langle t, m_\mu \rangle - \frac{1}{2} C'_\mu(t, t)\right).$$
+
+$$
+\exp\left(i\langle t, m \rangle - \frac{1}{2} C(t, t)\right) = \exp\left(i\langle t, m_\mu \rangle - \frac{1}{2} C'_\mu(t, t)\right).
+$$
+
 In particular, for any $t$ there exists $n_t \in \mathbb{Z}$ such that
-$$i\langle t, m \rangle - \frac{1}{2} C(t, t) = i\langle t, m_\mu \rangle - \frac{1}{2} C'_\mu(t, t) + 2i\pi n_t.$$
+
+$$
+i\langle t, m \rangle - \frac{1}{2} C(t, t) = i\langle t, m_\mu \rangle - \frac{1}{2} C'_\mu(t, t) + 2i\pi n_t.
+$$
+
 We deduce that $n$ is a continuous map from $E$ to $\mathbb{Z}$, and thus must be constant because $E$ is connected. By looking at the value at $t = 0$, we deduce that for any $t$, $n_t = 0$. Looking at real and imaginary parts we obtain that for any $t$,
-$$\langle t, m \rangle = \langle t, m_\mu \rangle \quad \text{and} \quad C(t, t) = C'_\mu(t, t).$$
+
+$$
+\langle t, m \rangle = \langle t, m_\mu \rangle \quad \text{and} \quad C(t, t) = C'_\mu(t, t).
+$$
+
 We immediately deduce that $m = m_\mu$. Moreover, because $C$ and $C'_\mu$ are symmetric, they are characterized by their values on the diagonal. Indeed, for any $x, y$,
-$$C(x, y) = \frac{1}{2} (C(x + y, x + y) - C(x, x) - C(y, y)).$$
+
+$$
+C(x, y) = \frac{1}{2} (C(x + y, x + y) - C(x, x) - C(y, y)).
+$$
+
 We deduce that $C = C'_\mu$.
 
 ## Lemma: IsGaussian.ext_iff {#lem:IsGaussian.ext_iff lean="ProbabilityTheory.IsGaussian.ext, ProbabilityTheory.IsGaussian.ext_iff" uses="def:IsGaussian, def:covInnerBilin"}
@@ -281,7 +297,11 @@ $$
 ### Proof
 
 As $f$ is integrable, we can use Fubini theorem to obtain that
-$$\int f(x_i) \, d(\mu_1 \times \ldots \times \mu_d)(x) = \int f(x) \, d\mu_i(x) \times \prod_{j \ne i} \int 1 \, d\mu_j(x) = \int f(x) \, d\mu_i(x)$$
+
+$$
+\int f(x_i) \, d(\mu_1 \times \ldots \times \mu_d)(x) = \int f(x) \, d\mu_i(x) \times \prod_{j \ne i} \int 1 \, d\mu_j(x) = \int f(x) \, d\mu_i(x)
+$$
+
 because the $\mu_j$s are probability measures.
 
 ## Lemma: isCentered_stdGaussian {#lem:isCentered_stdGaussian lean="ProbabilityTheory.integral_strongDual_stdGaussian" uses="def:stdGaussian"}
@@ -340,7 +360,11 @@ The covariance matrix of the standard Gaussian measure is the identity matrix.
 ### Proof {uses="lem:isGaussian_iff_gaussian_charFun, lem:charFun_stdGaussian"}
 
 From [charFun_stdGaussian](#lem:charFun_stdGaussian), we know that for all $t \in \mathbb{R}$,
-$$\hat{\mu}(t) = \exp\left(-\frac{\|t\|^2}{2}\right) = \exp\left(-\frac{\langle t, \mathrm{I}t\rangle}{2}\right).$$
+
+$$
+\hat{\mu}(t) = \exp\left(-\frac{\|t\|^2}{2}\right) = \exp\left(-\frac{\langle t, \mathrm{I}t\rangle}{2}\right).
+$$
+
 As the identity is positive semidefinite, we deduce from [isGaussian_iff_gaussian_charFun](#lem:isGaussian_iff_gaussian_charFun) that $\Sigma_\mu$ is the identity matrix.
 
 ## Definition: Multivariate Gaussian {#def:multivariateGaussian lean="ProbabilityTheory.multivariateGaussian" uses="def:stdGaussian"}

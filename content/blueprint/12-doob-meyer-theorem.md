@@ -188,7 +188,11 @@ For $i,n\in\mathbb{N}$ set $f_{n}^{(i)}:=f_n \mathbb{1}_{(|f_n|\leq i)}$ such th
   $ \lambda_n^{n} f_n^{(i)} + \ldots+\lambda_{N_n}^{n} f_{N_n}^{(i)}$ converge in $L^2$ for every $i\in\mathbb{N}$.
   By uniform integrability, $\lim_{i\to \infty}\| f^{(i)}_n- f_n\|_1=0$, uniformly with respect to $n$.
   Hence, once again, uniformly with respect to $n$,
-  $$ \textstyle\lim_{i\to\infty}\|  (\lambda_n^{n} f_n^{(i)} + \ldots+\lambda_{N_n}^{n} f_{N_n}^{(i)})-(\lambda_n^{n} f_n + \ldots+\lambda_{N_n}^{n} f_{N_n})\|_1= 0.$$
+  
+$$
+\textstyle\lim_{i\to\infty}\|  (\lambda_n^{n} f_n^{(i)} + \ldots+\lambda_{N_n}^{n} f_{N_n}^{(i)})-(\lambda_n^{n} f_n + \ldots+\lambda_{N_n}^{n} f_{N_n})\|_1= 0.
+$$
+
   Thus $(\lambda_n^{n} f_n + \ldots+\lambda_{N_n}^{n} f_{N_n})_{n\geq 1}$  is a Cauchy sequence in $L^1$.
 
 \paragraph{Komlòs lemma for nonnegative random variables}
@@ -274,7 +278,10 @@ _Upstream marks this `\mathlibok`: realized in mathlib itself._
 Let $X : \mathbb{N} \to \Omega \to E$ be a process indexed by $\mathbb{N}$, for $E$ a Banach space.
 Let $(\mathcal{F}_n)_{n\in\mathbb{N}}$ be a filtration on $\Omega$.
 The predictable part of $X$ is the process $A : \mathbb{N} \to \Omega \to E$ defined for $n \ge 0$ by
-$$A_n = \sum_{k=0}^{n-1} \mathbb{E}[X_{k+1}-X_k \mid \mathcal{F}_k].$$
+
+$$
+A_n = \sum_{k=0}^{n-1} \mathbb{E}[X_{k+1}-X_k \mid \mathcal{F}_k].
+$$
 
 ## Definition: Martingale part {#def:martingalePart lean="MeasureTheory.martingalePart" uses="def:predictablePart"}
 
@@ -696,14 +703,18 @@ WLOG $S^n_{2^n} = S_T=0$ and $S_t\leq 0$ (else consider $S_t-\mathbb{E}\left[S_T
 We write $\tau_n(c)$ for the hitting time $\tau^T_{A^n_{k+1}>c}$.
 
 By [uniformIntegrable_predictablePart_aux4](#lem:uniformIntegrable_predictablePart_aux4),
+
 $$
 \int_{(A^n_{2^n}>c)} A^n_{2^n} dP
 \le -2 \int_{\tau_n(c/2)< 2^n} S^n_{\tau_n(c/2)} dP - \int_{\tau_n(c) < 2^n} S^n_{\tau_n(c)} dP.
 $$
+
 On the other hand, by [uniformIntegrable_predictablePart_aux5](#lem:uniformIntegrable_predictablePart_aux5),
+
 $$
 P(\tau_n(c)<2^n) \le -\frac{\mathbb{E}[S_0]}{c}
 $$
+
 which goes to $0$ uniformly in $n$ as $c$ goes to infinity.
 
 The integrals in the upper bound on $\int_{(A^n_{2^n}>c)} A^n_{2^n} dP$ are integrals of uniformly integrable random variables (by the class D assumption) over sets whose probability goes to zero uniformly.
@@ -908,13 +919,16 @@ If $f_n, f : [0, 1] \rightarrow \mathbb{R}$ are increasing functions such that $
 ### Proof
 
 Let $t\in[0,T]$ and $s\in\mathcal{D}^T$ such that $t<s$. We have
-  $$
-  \limsup_n f_n(t)\leq \limsup_n f_n(s)=f(s).
-  $$
+  
+$$
+\limsup_n f_n(t)\leq \limsup_n f_n(s)=f(s).
+$$
+
   Since the above is true uniformly in $s$ in particular since $f$ is right-continuous
-  $$
-  \limsup_n f_n(t)\leq\lim_{\stackrel{s\rightarrow t^+}{s\in\mathcal{D}^T}}f(s)=f(t).
-  $$
+  
+$$
+\limsup_n f_n(t)\leq\lim_{\stackrel{s\rightarrow t^+}{s\in\mathcal{D}^T}}f(s)=f(t).
+$$
 
 ## Lemma: incr_fun_lim_right_cont_lim_eq {#lem:incr_fun_lim_right_cont_lim_eq}
 
@@ -925,12 +939,15 @@ If $f_n, f : [0, 1] \rightarrow \mathbb{R}$ are increasing functions such that $
 
 By lemma [incr_fun_lim_right_cont_limsup_ineq](#lem:incr_fun_lim_right_cont_limsup_ineq) it is enough to show that $\liminf_n f_n(t)\geq f(t)$.
   Let $s\in\mathcal{D}^T$ such that $t>s$. We have
-  $$
-  \liminf_n f_n(t)\geq \liminf_n f_n(s)=f(s).
-  $$
+  
+$$
+\liminf_n f_n(t)\geq \liminf_n f_n(s)=f(s).
+$$
+
   Since the above is true uniformly in $s$ in particular since $f$ is continuous in $t$
-  $$
-  \liminf_n f_n(t)\geq\lim_{\stackrel{s\rightarrow t^-}{s\in\mathcal{D}^T}}f(s)=f(t).
+  
+$$
+\liminf_n f_n(t)\geq\lim_{\stackrel{s\rightarrow t^-}{s\in\mathcal{D}^T}}f(s)=f(t).
 $$
 
 ## Lemma: lim_Exp_A_n_tau_is_Exp_A_tau {#lem:lim_Exp_A_n_tau_is_Exp_A_tau}
@@ -957,14 +974,18 @@ Let $\tau$ be an $(\mathcal{F}_t)_{t\in[0,T]}$ stopping time. We have $\limsup_n
 
 Firstly we notice that $\liminf_n \mathbb{E}[A_\tau^n]  \leq \limsup_n  \mathbb{E}  [\mathcal{A}_\tau^n  ]  \leq \mathbb{E}[\limsup_n  \mathcal{A}_\tau^n  ]  \leq \mathbb{E}[ A_\tau ]$,
 where the first inequality is justified by the definition of limsup and liminf and the fact that
+
 $$
 \sup_{k\geq n}\mathbb{E}[\mathcal{A}^k_\tau]\geq \sum_{m=k}^{N_k}\lambda^k_m\mathbb{E}[A^m_\tau]\geq \sum_{m=k}^{N_k}\lambda^k_m\inf_{j\geq n}\mathbb{E}[A^j_\tau]=\inf_{k\geq n}\mathbb{E}[A^k_\tau]
 $$
+
 the third inequality by [incr_fun_lim_right_cont_limsup_ineq](#lem:incr_fun_lim_right_cont_limsup_ineq).
 Let's prove the second inequality: observe that
+
 $$
 \mathcal{A}^n_\tau= A_1+\mathcal{A}^n_\tau-A_1\leq A_1+(\mathcal{A}^n_\tau-A_1)_+,
 $$
+
 thus it follows that $\mathcal{A}^n_\tau - (\mathcal{A}^n_\tau-A_1)_+\leq A_1$; since $A_1$ is an integrable guardian the inverse Fatou Lemma may be applied to show together with limsup properties that
 
 $$

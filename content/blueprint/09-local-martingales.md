@@ -44,12 +44,15 @@ For each $n$, since $\sigma_{n,k} \to \infty$ a.s. as $k \to \infty$, we may cho
 ## Lemma: isLocalizingSequence_ae {#lem:isLocalizingSequence_ae lean="ProbabilityTheory.isLocalizingSequence_localizingSequenceOfProp" uses="def:localizingSequence"}
 
 Let $P$ be a predicate on paths and suppose $X$ is a stochastic process satisfying $P$ a.s. Then, defining
-  $$\tau_n(\omega) =
+  
+$$
+\tau_n(\omega) =
   \begin{cases}
     \infty & \text{if } X(\omega) \text{ satisfies } P \\
     0 & \text{otherwise}
   \end{cases}
-  $$
+$$
+
   for all $n \in \mathbb{N}$, the sequence $(\tau_n)_{n \in \mathbb{N}}$ is a localizing sequence.
 
 ## Definition: Local property {#def:locally lean="ProbabilityTheory.Locally, ProbabilityTheory.Locally.localSeq" uses="def:localizingSequence, def:stoppedProcess"}
@@ -260,7 +263,11 @@ The class of cadlag martingales is stable. That is, if $M$ is a cadlag martingal
 Clearly, the stopped process $M^{\tau}\mathbb{I}_{\tau > 0}$ is cadlag and it remains to show that it is a martingale.
 
   Fixing $s \le t \in T$, as $\{\tau > 0\} \in \mathcal{F}_0 \subseteq \mathcal{F}_s$, we have
-  $$P[M^{\tau}_t \mathbb{I}_{\tau > 0} \mid \mathcal{F}_s] = \mathbb{I}_{\tau > 0}P[M_{\tau \wedge t} \mid \mathcal{F}_{s}].$$
+  
+$$
+P[M^{\tau}_t \mathbb{I}_{\tau > 0} \mid \mathcal{F}_s] = \mathbb{I}_{\tau > 0}P[M_{\tau \wedge t} \mid \mathcal{F}_{s}].
+$$
+
   Thus, as $\tau \wedge t$ is a bounded stopping time, we have by the optional stopping theorem
   ([Optional sampling (continuous time)](#lem:optionalSampling)) that $P[M_{\tau \wedge t} \mid \mathcal{F}_{s}] = M_{(\tau \wedge t) \wedge s} = M_{\tau \wedge s}$
   and so, $P[M^{\tau}_t \mathbb{I}_{\tau > 0} \mid \mathcal{F}_s] = M^{\tau}_s \mathbb{I}_{\tau > 0}$ as required.
@@ -455,9 +462,17 @@ $$
 $$
 
 Because $X$ is of class DL, that last set is uniformly integrable, thus
-$$\{X^{\tau_n}_\sigma \mid \sigma \text{ is a finite stopping time}\}$$
+
+$$
+\{X^{\tau_n}_\sigma \mid \sigma \text{ is a finite stopping time}\}
+$$
+
 is uniformly integrable thanks to [uniformIntegrableComp](#lem:uniformIntegrableComp). [uniformIntegrableDominated](#lem:uniformIntegrableDominated) allows to conclude that
-$$\{X^{\tau_n}_\sigma \mathbb{I}_{\tau_n > 0} \mid \sigma \text{ is a finite stopping time}\}$$
+
+$$
+\{X^{\tau_n}_\sigma \mathbb{I}_{\tau_n > 0} \mid \sigma \text{ is a finite stopping time}\}
+$$
+
 is uniformly integrable, thus $X^{\tau_n} \mathbb{I}_{\tau_n > 0}$ is of class D. Obviously $\tau_n \rightarrow +\infty$ as $n$ goes to infinity, so $X$ is locally of class D.
 
 ## Lemma: locally_classD_of_locally_classDL {#lem:locally_classD_of_locally_classDL lean="ProbabilityTheory.locally_classD_of_locally_classDL" uses="def:rightContinuous, def:locally, def:classD, def:classDL"}
