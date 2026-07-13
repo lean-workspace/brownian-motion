@@ -18,12 +18,18 @@ npm run blueprint:sync         # refresh kernel statuses after Lean changes
 
 The mathematics here is the work of the
 [brownian-motion](https://github.com/RemyDegenne/brownian-motion) project:
+**"Formalization of a Brownian motion and of stochastic integrals in Lean"
+by Rémy Degenne and Peter Pfaffelhuber**. Per-part credits, as recorded in
+the upstream blueprint:
 
-- **Blueprint authors** — Rémy Degenne, Peter Pfaffelhuber
-- **Formalization authors** — Rémy Degenne, Markus Himmel, David Ledvinka,
-  Etienne Marion, Peter Pfaffelhuber, with additional contributions from
-  Jonas Bayer, Lorenzo Loccioli, Pietro Monticone, Alessio Rondelli, and
-  Jérémy Scanvic
+- **Brownian motion** — blueprint by Rémy Degenne and Peter Pfaffelhuber;
+  formalization by Rémy Degenne, Markus Himmel, David Ledvinka, Etienne
+  Marion, and Peter Pfaffelhuber, with additional contributions from Jonas
+  Bayer, Lorenzo Loccioli, Pietro Monticone, Alessio Rondelli, and Jérémy
+  Scanvic
+- **Stochastic integral** — blueprint by Rémy Degenne, Lorenzo Luccioli,
+  Etienne Marion, Alessio Rondelli, and Kexing Ying (formalization open —
+  anyone is welcome to contribute)
 - **Original blueprint site** —
   [remydegenne.github.io/brownian-motion/blueprint](https://remydegenne.github.io/brownian-motion/blueprint/)
 
