@@ -9,8 +9,6 @@ tags:
 
 ## Definition: Characteristic function {#def:charFunDual lean="MeasureTheory.charFunDual"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 The characteristic function of a measure $\mu$ on a normed space $E$ is the function $E^* \to \mathbb{C}$ defined by
 
 $$
@@ -21,13 +19,9 @@ $$
 
 ## Theorem: ext_of_charFunDual {#thm:ext_of_charFunDual lean="MeasureTheory.Measure.ext_of_charFunDual" uses="def:charFunDual"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 In a separable Banach space, if two finite measures have same characteristic function, they are equal.
 
 ## Definition: Characteristic function {#def:charFun lean="MeasureTheory.charFun"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 The characteristic function of a measure $\mu$ on an inner product space $E$ is the function $E \to \mathbb{C}$ defined by
 
@@ -41,13 +35,9 @@ This is equal to the normed space version of the characteristic function applied
 
 ## Theorem: ext_of_charFun {#thm:ext_of_charFun lean="MeasureTheory.Measure.ext_of_charFun" uses="def:charFun"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 In a separable Hilbert space, if two finite measures have same characteristic function, they are equal.
 
 ## Lemma: charFun_map_eq_charFunDual_smul {#lem:charFun_map_eq_charFunDual_smul lean="MeasureTheory.charFun_map_eq_charFunDual_smul" uses="def:charFun, def:charFunDual"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Let $\mu$ be a measure on $F$ and let $L \in F^*$. Then
 
@@ -58,8 +48,6 @@ $$
 $$
 
 ## Lemma: charFunDual_map {#lem:charFunDual_map lean="MeasureTheory.charFunDual_map" uses="def:charFunDual"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Let $\mu$ be a measure on a normed space $E$ and let $L$ be a continuous linear map from $E$ to $F$.
 Then for all $L' \in F^*$,
@@ -76,8 +64,6 @@ Let $F$ be a Banach space and $E$ be a Hilbert space.
 
 ## Definition: Covariance {#def:covarianceBilin lean="ProbabilityTheory.covarianceBilinDual, ProbabilityTheory.covarianceBilinDual_apply, ProbabilityTheory.covarianceBilinDual_apply'"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 The covariance bilinear form of a measure $\mu$ on $F$ with finite second moment is the continuous bilinear form $C_\mu : F^* \times F^* \to \mathbb{R}$ with
 
 $$
@@ -92,13 +78,9 @@ $$
 
 ## Lemma: covarianceBilin_same_eq_variance {#lem:covarianceBilin_same_eq_variance lean="ProbabilityTheory.covarianceBilinDual_self_eq_variance" uses="def:covarianceBilin"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 For $\mu$ a measure on $F$ with finite second moment and $L \in F^*$, $C_\mu(L, L) = \mathbb{V}_\mu[L]$.
 
 ## Definition: Covariance in a Hilbert space {#def:covInnerBilin lean="ProbabilityTheory.covarianceBilin"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 The covariance bilinear form of a finite measure $\mu$ with finite second moment on a Hilbert space $E$ is the continuous bilinear form $C_\mu : E \times E \to \mathbb{R}$ with
 
@@ -111,8 +93,6 @@ $$
 This is $C_\mu$ applied to the linear maps $L_x, L_y \in E^*$ defined by $L_x(z) = \langle x, z \rangle$ and $L_y(z) = \langle y, z \rangle$.
 
 ## Lemma: covInnerBilin_map {#lem:covInnerBilin_map lean="ProbabilityTheory.covarianceBilin_map" uses="def:covInnerBilin"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Let $E$ and $F$ be two Hilbert spaces with $F$ finite dimensional, $\mu$ a finite measure on $E$ with finite second moment, and $L : E \to F$ a continuous linear map.
 Then the covariance bilinear form of the measure $L_*\mu$ is given by

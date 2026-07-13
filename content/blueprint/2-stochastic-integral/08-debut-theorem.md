@@ -16,19 +16,13 @@ A paving is simply a set of sets.
 
 ## Definition: image2_prod {#def:image2_prod}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 The product of two pavings $S$ and $T$ is the set of sets of the form $s \times t$ where $s \in S$ and $t \in T$. We denote that product by $S \times T$.
 
 ## Definition: supClosure {#def:supClosure lean="supClosure"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 For a paving $S$, we denote by $S^{\cup f}$ the set of finite unions of sets in $S$.
 
 ## Definition: infClosure {#def:infClosure lean="infClosure"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 For a paving $S$, we denote by $S^{\cap f}$ the set of finite intersections of sets in $S$.
 
@@ -58,8 +52,6 @@ If a paving $S$ is closed under pairwise union, then a set $s$ is in $S_\sigma$ 
 Similar to the proof of [InfClosed.mem_countableInfClosure_iff](#lem:InfClosed.mem_countableInfClosure_iff).
 
 ## Definition: IsCompactSystem {#def:IsCompactSystem lean="IsCompactSystem"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 A set of sets $K$ is a compact system if for every countable family $(C_n)_{n \in \mathbb{N}}$ of sets in $K$ such that $\bigcap_{n \in\mathbb{N}} C_n = \emptyset$, there exists a finite subset $S$ of $\mathbb{N}$ such that $\bigcap_{n \in S} C_n = \emptyset$.
 
@@ -405,8 +397,6 @@ Since $B$ is a Borel subset of $\mathcal{S}$ and $X$ is progressively measurable
 The hitting time is then the debut of the set $E = \{(s,\omega) : \mathbf{1}_B(X_s(\omega)) = 1\}$, and therefore is a stopping time by [debut_of_progr_meas_is_stop_time](#thm:debut_of_progr_meas_is_stop_time).
 
 ## Definition: leastGE {#def:leastGE lean="MeasureTheory.leastGE"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Let $T$ be a conditionally complete linear order with a bottom element and let $R$ be a preorder.
 For a process $X : T \to Ω \to R$ and $a \in R$, define the random time

@@ -273,8 +273,6 @@ Finally, the subsequence of $g_n$ converges almost surely to $g = -\log(h)$.
 
 ## Definition: Predictable part {#def:predictablePart lean="MeasureTheory.predictablePart" uses="def:filtration"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $X : \mathbb{N} \to \Omega \to E$ be a process indexed by $\mathbb{N}$, for $E$ a Banach space.
 Let $(\mathcal{F}_n)_{n\in\mathbb{N}}$ be a filtration on $\Omega$.
 The predictable part of $X$ is the process $A : \mathbb{N} \to \Omega \to E$ defined for $n \ge 0$ by
@@ -285,8 +283,6 @@ $$
 
 ## Definition: Martingale part {#def:martingalePart lean="MeasureTheory.martingalePart" uses="def:predictablePart"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $X : \mathbb{N} \to \Omega \to E$ be a process indexed by $\mathbb{N}$, for $E$ a Banach space.
 Let $(\mathcal{F}_n)_{n\in\mathbb{N}}$ be a filtration on $\Omega$ and let $A$ be the predictable part of $X$ for that filtration.
 The martingale part of $X$ is the process $M : \mathbb{N} \to \Omega \to E$ defined by $M_n = X_n - A_n$.
@@ -294,8 +290,6 @@ The martingale part of $X$ is the process $M : \mathbb{N} \to \Omega \to E$ defi
 In what follows, we fix a process $X : \mathbb{N} \to \Omega \to E$ and a filtration $(\mathcal{F}_n)_{n \in \mathbb{N}}$, and denote by $A$ the predictable part of $X$ and by $M$ its martingale part.
 
 ## Lemma: predictablePart_zero {#lem:predictablePart_zero lean="MeasureTheory.predictablePart_zero" uses="def:predictablePart"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 We have $A_0 = 0$.
 
@@ -305,8 +299,6 @@ By definition.
 
 ## Lemma: martingalePart_zero {#lem:martingalePart_zero lean="MeasureTheory.martingalePart_zero" uses="def:martingalePart"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 $M_0 = X_0$.
 
 ### Proof {uses="def:martingalePart, lem:predictablePart_zero"}
@@ -314,8 +306,6 @@ $M_0 = X_0$.
 By definition of the martingale part, $M = X - A$. By [predictablePart_zero](#lem:predictablePart_zero), $A_0 = 0$, thus $M_0 = X_0 - A_0 = X_0$.
 
 ## Lemma: predictablePart_add_one {#lem:predictablePart_add_one lean="MeasureTheory.predictablePart_add_one" uses="def:predictablePart"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 For any integer $n \ge 0$, $A_{n+1} = A_n + \mathbb{E}[X_{n+1} - X_n \mid \mathcal{F}_n]$.
 
@@ -354,8 +344,6 @@ $$
 
 ## Lemma: Martingale.predictablePart_eq_zero {#lem:Martingale.predictablePart_eq_zero lean="MeasureTheory.Martingale.predictablePart_eq_zero" uses="def:predictablePart, def:Martingale"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 If $X$ is a martingale, then $A = 0$ almost surely.
 
 ### Proof {uses="def:predictablePart, def:Martingale"}
@@ -363,8 +351,6 @@ If $X$ is a martingale, then $A = 0$ almost surely.
 By the martingale property, each conditional expectation in the definition of $A$ is zero.
 
 ## Lemma: isStronglyPredictable.predictablePart_eq {#lem:isStronglyPredictable.predictablePart_eq lean="MeasureTheory.IsStronglyPredictable.predictablePart_eq" uses="def:predictablePart, def:predictable"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 If $X$ is predictable, then $A = X - X_0$ almost surely.
 
@@ -375,8 +361,6 @@ We get a telescoping sum in the definition of $A$ and thus $A_n = X_n - X_0$ a.s
 
 ## Lemma: martingalePart_eq_zero {#lem:martingalePart_eq_zero lean="MeasureTheory.IsPredictable.martingalePart_eq" uses="def:martingalePart, def:predictable"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 If $X$ is predictable, then $M = X_0$ almost surely.
 
 ### Proof {uses="lem:isStronglyPredictable.predictablePart_eq"}
@@ -384,8 +368,6 @@ If $X$ is predictable, then $M = X_0$ almost surely.
 By definition of the martingale part, $M = X - A$. By [isStronglyPredictable.predictablePart_eq](#lem:isStronglyPredictable.predictablePart_eq), $A = X - X_0$ almost surely, thus $M = X_0$ almost surely.
 
 ## Lemma: Martingale.martingalePart_eq {#lem:Martingale.martingalePart_eq lean="MeasureTheory.Martingale.martingalePart_eq" uses="def:martingalePart, def:Martingale"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 If $X$ is a martingale, then $M = X$ almost surely.
 
@@ -395,8 +377,6 @@ By definition of the martingale part, $M = X - A$. By [Martingale.predictablePar
 
 ## Lemma: predictablePart_smul {#lem:predictablePart_smul lean="MeasureTheory.predictablePart_smul" uses="def:predictablePart"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 For any scalar $c$, the predictable part of $c X$ is $c A$.
 
 ### Proof {uses="def:predictablePart"}
@@ -404,8 +384,6 @@ For any scalar $c$, the predictable part of $c X$ is $c A$.
 Linearity of the conditional expectation.
 
 ## Lemma: martingalePart_smul {#lem:martingalePart_smul lean="MeasureTheory.martingalePart_smul" uses="def:martingalePart"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 For any scalar $c$, the martingale part of $c X$ is $c M$.
 
@@ -415,8 +393,6 @@ By definition of the martingale part, $M = X - A$. By [predictablePart_smul](#le
 
 ## Lemma: predictablePart_add {#lem:predictablePart_add lean="MeasureTheory.predictablePart_add" uses="def:predictablePart"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 The predictable part of $X + Y$ is the sum of the predictable part of $X$ and the predictable part of $Y$.
 
 ### Proof {uses="def:predictablePart"}
@@ -424,8 +400,6 @@ The predictable part of $X + Y$ is the sum of the predictable part of $X$ and th
 Linearity of the conditional expectation.
 
 ## Lemma: martingalePart_add {#lem:martingalePart_add lean="MeasureTheory.martingalePart_add" uses="def:martingalePart"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 The martingale part of $X + Y$ is the sum of the martingale part of $X$ and the martingale part of $Y$.
 
@@ -435,13 +409,9 @@ By definition of the martingale part, $M = X - A$. By [predictablePart_add](#lem
 
 ## Lemma: adapted_predictablePart {#lem:adapted_predictablePart lean="MeasureTheory.stronglyAdapted_predictablePart" uses="def:predictablePart"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 The predictable part $A$ is adapted to the filtration $(\mathcal{F}_{n+1})_{n \in \mathbb{N}}$.
 
 ## Lemma: predictable_predictablePart {#lem:predictable_predictablePart lean="MeasureTheory.isPredictable_predictablePart" uses="def:predictablePart, def:predictable"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 The predictable part of a process is predictable.
 
@@ -451,14 +421,10 @@ By [predictable_nat_iff](#lem:predictable_nat_iff), the process $A$ is predictab
 
 ## Lemma: martingale_martingalePart {#lem:martingale_martingalePart lean="MeasureTheory.martingale_martingalePart" uses="def:martingalePart, def:Martingale"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Suppose that the filtration is $\sigma$-finite and that $X$ is adapted, with $X_n$ integrable for all $n$.
 Then the martingale part of $X$ is a martingale.
 
 ## Lemma: Submartingale.monotone_predictablePart {#lem:Submartingale.monotone_predictablePart lean="MeasureTheory.Submartingale.monotone_predictablePart" uses="def:predictablePart, def:Submartingale"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 The predictable part of a real-valued submartingale is an almost surely nondecreasing process.
 
@@ -479,8 +445,6 @@ Thus, $(A_n)_{n \in \mathbb{N}}$ is almost surely nondecreasing.
 
 ## Lemma: Submartingale.predictablePart_nonneg {#lem:Submartingale.predictablePart_nonneg lean="MeasureTheory.Submartingale.predictablePart_nonneg" uses="def:predictablePart, def:Submartingale"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 The predictable part of a real-valued submartingale is almost surely nonnegative.
 
 ### Proof {uses="lem:Submartingale.monotone_predictablePart, lem:predictablePart_zero"}
@@ -488,8 +452,6 @@ The predictable part of a real-valued submartingale is almost surely nonnegative
 By [Submartingale.monotone_predictablePart](#lem:Submartingale.monotone_predictablePart), the predictable part $A$ is almost surely nondecreasing. By [predictablePart_zero](#lem:predictablePart_zero), $A_0 = 0$. Therefore, $A_n \ge 0$ almost surely for all $n \in \mathbb{N}$.
 
 ## Lemma: centering_basic {#lem:centering_basic uses="def:predictablePart, def:martingalePart"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Fake lemma: import this lemma when using the basic properties of the Doob decomposition.
 

@@ -11,15 +11,11 @@ tags:
 
 ## Definition: Real Gaussian measure {#def:gaussianReal lean="ProbabilityTheory.gaussianReal"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 The real Gaussian measure with mean $\mu \in \mathbb{R}$ and variance $\sigma^2 > 0$ is the measure on $\mathbb{R}$ with density $\frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2 \sigma^2}\right)$ with respect to the Lebesgue measure.
   The real Gaussian measure with mean $\mu \in \mathbb{R}$ and variance $0$ is the Dirac measure $\delta_\mu$.
   We denote this measure by $\mathcal{N}(\mu, \sigma^2)$.
 
 ## Lemma: charFun_gaussianReal {#lem:charFun_gaussianReal lean="ProbabilityTheory.charFun_gaussianReal" uses="def:gaussianReal, def:charFun"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 The characteristic function of a real Gaussian measure with mean $\mu$ and variance $\sigma^2$ is given by
 $x \mapsto \exp\left(i \mu x - \frac{\sigma^2 x^2}{2}\right)$.
@@ -61,19 +57,13 @@ Let $F$ be a separable Banach space.
 
 ## Definition: Gaussian measure {#def:IsGaussian lean="ProbabilityTheory.IsGaussian" uses="def:gaussianReal"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 A measure $\mu$ on $F$ is Gaussian if for every continuous linear form $L \in F^*$, the pushforward measure $L_* \mu$ is a Gaussian measure on $\mathbb{R}$.
 
 ## Lemma: IsGaussian.IsProbabilityMeasure {#lem:IsGaussian.IsProbabilityMeasure uses="def:IsGaussian"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 A Gaussian measure is a probability measure.
 
 ## Theorem: isGaussian_iff_charFunDual_eq {#thm:isGaussian_iff_charFunDual_eq lean="ProbabilityTheory.isGaussian_iff_charFunDual_eq" uses="def:IsGaussian, def:charFunDual"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 A finite measure $\mu$ on $F$ is Gaussian if and only if for every continuous linear form $L \in F^*$, the characteristic function of $\mu$ at $L$ is
 
@@ -91,8 +81,6 @@ in which $\mathbb{V}_\mu[L]$ is the variance of $L$ with respect to $\mu$.
 
 ## Lemma: isGaussian_map {#lem:isGaussian_map lean="ProbabilityTheory.isGaussian_map" uses="def:IsGaussian"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $F, G$ be two Banach spaces, let $\mu$ be a Gaussian measure on $F$ and let $T : F \to G$ be a continuous linear map.
 Then $T_*\mu$ is a Gaussian measure on $G$.
 
@@ -103,22 +91,16 @@ Then the measure $\mu$ translated by $c$ (the map of $\mu$ by $x \mapsto x + c$)
 
 ## Lemma: isGaussian_conv {#lem:isGaussian_conv lean="ProbabilityTheory.isGaussian_conv" uses="def:IsGaussian"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 The convolution of two Gaussian measures is a Gaussian measure.
 
 \paragraph{Fernique's theorem}
 
 ## Theorem: exists_integrable_exp_sq_of_map_rotation_eq_self {#thm:exists_integrable_exp_sq_of_map_rotation_eq_self lean="ProbabilityTheory.exists_integrable_exp_sq_of_map_rotation_eq_self"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $\mu$ be a finite measure on $F$ such that $\mu \times \mu$ is invariant under the rotation of angle $-\frac{\pi}{4}$.
 Then there exists $C > 0$ such that the function $x \mapsto \exp (C \Vert x \Vert ^ 2)$ is integrable with respect to $\mu$.
 
 ## Lemma: IsGaussian.map_rotation_eq_self {#lem:IsGaussian.map_rotation_eq_self lean="ProbabilityTheory.IsGaussian.map_rotation_eq_self_of_forall_strongDual_eq_zero" uses="def:IsGaussian"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 For a centered Gaussian measure $\mu$, $\mu \times \mu$ is invariant by rotation.
 
@@ -126,15 +108,11 @@ For a centered Gaussian measure $\mu$, $\mu \times \mu$ is invariant by rotation
 
 ## Theorem: Fernique's theorem {#thm:IsGaussian.exists_integrable_exp_sq lean="ProbabilityTheory.IsGaussian.exists_integrable_exp_sq" uses="def:IsGaussian"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 For a Gaussian measure, there exists $C > 0$ such that the function $x \mapsto \exp (C \Vert x \Vert ^ 2)$ is integrable.
 
 ### Proof {uses="thm:isGaussian_iff_charFunDual_eq, lem:IsGaussian.IsProbabilityMeasure, thm:exists_integrable_exp_sq_of_map_rotation_eq_self, lem:IsGaussian.map_rotation_eq_self"}
 
 ## Lemma: IsGaussian.memLp_id {#lem:IsGaussian.memLp_id lean="ProbabilityTheory.IsGaussian.memLp_id" uses="def:IsGaussian"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 A Gaussian measure $\mu$ has finite moments of all orders.
 In particular, there is a well defined mean $m_\mu := \mu[\mathrm{id}]$, and for all $L \in F^*$, $\mu[L] = L(m_\mu)$.
@@ -282,8 +260,6 @@ The fact that this definition does not depend on the choice of basis will be a c
 
 ## Lemma: integral_eval_pi {#lem:integral_eval_pi lean="MeasureTheory.integral_comp_eval"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 For $\mu_1, \ldots, \mu_d$ probability measures on $\mathbb{R}$ and $f : \mathbb{R} \to \mathbb{R}$ integrable with respect to $\mu_i$, we have
 
 $$
@@ -413,13 +389,9 @@ This is given by [integral_id_multivariateGaussian](#lem:integral_id_multivariat
 
 ## Definition: Gaussian process {#def:IsGaussianProcess lean="ProbabilityTheory.IsGaussianProcess" uses="def:IsGaussian"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 A process $X : T \to \Omega \to E$ is Gaussian if for every finite subset $t_1, \ldots, t_n \in T$, the random vector $(X_{t_1}, \ldots, X_{t_n})$ has a Gaussian distribution.
 
 ## Lemma: isGaussianProcess_of_modification {#lem:isGaussianProcess_of_modification lean="ProbabilityTheory.IsGaussianProcess.congr" uses="def:IsGaussianProcess"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Let $X, Y : T \to \Omega \to E$ be two stochastic processes that are modifications of each other (that is, for all $t \in T$, $X_t =_{a.e.} Y_t$).
 If $X$ is a Gaussian process, then $Y$ is a Gaussian process as well.

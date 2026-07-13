@@ -11,13 +11,9 @@ This theorem has been formalized by Rémy Degenne and Peter Pfaffelhuber in the 
 
 ## Definition: Projective family {#def:IsProjectiveMeasureFamily lean="MeasureTheory.IsProjectiveMeasureFamily"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 A family of measures $P$ indexed by finite sets of $T$ is projective if, for finite sets $J \subseteq I$, the projection from $E^I$ to $E^J$ maps $P_I$ to $P_J$.
 
 ## Definition: Projective limit {#def:IsProjectiveLimit lean="MeasureTheory.IsProjectiveLimit" uses="def:IsProjectiveMeasureFamily"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 A measure $\mu$ on $E^T$ is the projective limit of a projective family of measures $P$ indexed by finite sets of $T$ if, for every finite set $I \subseteq T$, the projection from $E^T$ to $E^I$ maps $\mu$ to $P_I$.
 
@@ -38,14 +34,10 @@ We prove that the matrix $C_{ij} = \min(t_i, t_j)$ is positive semidefinite, whi
 
 ## Definition: Gram matrix {#def:gramMatrix lean="Matrix.gram"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $v_1, \ldots, v_n$ be vectors in an inner product space $E$.
 The Gram matrix of $v_1, \ldots, v_n$ is the matrix in $\mathbb{R}^{n \times n}$ with entries $G_{ij} = \langle v_i, v_j \rangle$ for $1 \leq i,j \leq n$.
 
 ## Lemma: posSemidef_gramMatrix {#lem:posSemidef_gramMatrix lean="Matrix.posSemidef_gram" uses="def:gramMatrix"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 A gram matrix is positive semidefinite.
 

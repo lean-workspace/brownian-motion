@@ -33,70 +33,48 @@ Let $(E, d_E)$ be a pseudo-metric space.
 
 ## Definition: $\varepsilon$-cover {#def:IsCover lean="Metric.IsCover"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 A set $C \subseteq E$ is an $\varepsilon$-cover of a set $A \subseteq E$ if for every $x \in A$, there exists $y \in C$ such that $d_E(x, y) \le \varepsilon$.
 
 ## Definition: External covering number {#def:externalCoveringNumber lean="Metric.externalCoveringNumber" uses="def:IsCover"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 The external covering number of a set $A \subseteq E$ for $\varepsilon \ge 0$ is the smallest cardinality of an $\varepsilon$-cover of $A$.
   Denote it by $N^{ext}_\varepsilon(A)$.
 
 ## Definition: Internal covering number {#def:internalCoveringNumber lean="Metric.coveringNumber" uses="def:IsCover"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 The internal covering number of a set $A \subseteq E$ for $\varepsilon \ge 0$ is the smallest cardinality of an $\varepsilon$-cover of $A$ which is a subset of $A$.
   Denote it by $N^{int}_\varepsilon(A)$.
 
 ## Definition: Separated set {#def:IsSeparated lean="Metric.IsSeparated"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 A set $c \subseteq E$ is $\varepsilon$-separated if for all $x, y \in c$, $d_E(x, y) > \varepsilon$.
 
 ## Definition: Packing number {#def:packingNumber lean="Metric.packingNumber" uses="def:IsSeparated"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 The packing number of a set $A \subseteq E$ for $\varepsilon > 0$ is the largest cardinality of an $\varepsilon$-separated subset of $A$.
 Denote it by $P_\varepsilon(A)$.
 
 ## Lemma: externalCoveringNumber_le_internalCoveringNumber {#lem:externalCoveringNumber_le_internalCoveringNumber lean="Metric.externalCoveringNumber_le_coveringNumber" uses="def:externalCoveringNumber, def:internalCoveringNumber"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 $N^{ext}_\varepsilon(A) \le N^{int}_\varepsilon(A)$.
 
 ## Lemma: internalCoveringNumber_le_packingNumber {#lem:internalCoveringNumber_le_packingNumber lean="Metric.coveringNumber_le_packingNumber" uses="def:internalCoveringNumber, def:packingNumber"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 $N^{int}_\varepsilon(A) \le P_\varepsilon(A)$.
 
 ## Lemma: packingNumber_two_le_externalCoveringNumber {#lem:packingNumber_two_le_externalCoveringNumber lean="Metric.packingNumber_two_mul_le_externalCoveringNumber" uses="def:packingNumber, def:externalCoveringNumber"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 $P_{2\varepsilon}(A) \le N^{ext}_\varepsilon(A)$.
 
 ## Lemma: internalCoveringNumber_eq_one_of_diam_le {#lem:internalCoveringNumber_eq_one_of_diam_le lean="Metric.coveringNumber_eq_one_of_ediam_le" uses="def:internalCoveringNumber"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 If $\mathrm{diam}(A) \le \varepsilon$ and $A$ is nonempty, then $N^{int}_\varepsilon(A) = 1$.
 
 ## Lemma: externalCoveringNumber_mono {#lem:externalCoveringNumber_mono lean="Metric.externalCoveringNumber_mono_set" uses="def:externalCoveringNumber"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 For $B \subseteq A$, $N^{ext}_\varepsilon(B) \le N^{ext}_{\varepsilon}(A)$.
 
 ## Lemma: internalCoveringNumber_subset_le {#lem:internalCoveringNumber_subset_le lean="Metric.coveringNumber_subset_le" uses="def:internalCoveringNumber"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 For $B \subseteq A$, $N^{int}_\varepsilon(B) \le N^{int}_{\varepsilon/2}(A)$.
 
@@ -379,26 +357,18 @@ We want to cover $J$ with balls that have radius logarithmic in the number of po
 
 ## Definition: logSizeRadius {#def:logSizeRadius lean="PairReduction.logSizeRadius"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $V$ be a finite subset of a metric space and let $t \in V$ and $a > 1$, $c > 0$.
 Let the _log-size radius_ of $t$ in $V$, denoted by $r_{V,t}$, be the smallest positive integer $r$ such that $\vert B_V(t, r c) \vert \le a^{r}$.
 
 ## Lemma: card_logSizeRadius_ge {#lem:card_logSizeRadius_ge lean="PairReduction.pow_logSizeRadius_le_card_le_logSizeRadius" uses="def:logSizeRadius"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 $a^{r_{V,t}-1} \le \vert B_V(t, (r_{V,t}-1)c) \vert$ .
 
 ## Lemma: card_logSizeRadius_le {#lem:card_logSizeRadius_le lean="PairReduction.card_le_logSizeRadius_le_pow_logSizeRadius" uses="def:logSizeRadius"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 $\vert B_V(t, r_{V,t}c) \vert \le a^{r_{V,t}}$ .
 
 ## Definition: Log-size ball sequence {#def:logSizeBallSequence lean="PairReduction.logSizeBallSeq" uses="def:logSizeRadius"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Let $(T,d_T)$ be a metric space and let $J \subseteq T$ be finite, $a,c \in \mathbb R_+$ with $a \ge 1$ and $n \in \{1, 2, ...\}$ such that $|J| \le a^n$.
 An log-size ball sequence for $(J, a, c, n)$ is a sequence of $(V_i, t_i, r_i)_{i \in \mathbb{N}}$ such that
@@ -411,8 +381,6 @@ A log-size ball sequence gives a partition of $J$ into sets which are contained 
 
 ## Lemma: logSizeRadius_logSizeBallSequence_le {#lem:logSizeRadius_logSizeBallSequence_le lean="PairReduction.radius_logSizeBallSeq_le" uses="def:logSizeBallSequence"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 The radius of a log-size ball sequence $(V_i, t_i, r_i)_{i \in \mathbb{N}}$ for $(J, a, c, n)$ satisfies $r_i \le n$ for all $i \in \mathbb{N}$.
 
 ### Proof
@@ -420,8 +388,6 @@ The radius of a log-size ball sequence $(V_i, t_i, r_i)_{i \in \mathbb{N}}$ for 
 Since $|J| \le a^n$, we have $\vert B_{V_i}(t_i, n c) \vert \le \vert J \vert \le a^{n}$.
 
 ## Lemma: logSizeBallSequence_V_anti {#lem:logSizeBallSequence_V_anti lean="PairReduction.finset_logSizeBallSeq_add_one_subset" uses="def:logSizeBallSequence"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 The sets $V_i$ of a log-size ball sequence $(V_i, t_i, r_i)_{i \in \mathbb{N}}$ are a decreasing sequence of sets. That is, $V_{i+1} \subseteq V_i$ for all $i \in \mathbb{N}$.
 
@@ -431,8 +397,6 @@ $V_{i+1} = V_i \setminus B_{V_i}(t_i, (r_i - 1)c)$ hence $V_{i+1} \subseteq V_i$
 
 ## Lemma: logSizeBallSequence_eq_zero {#lem:logSizeBallSequence_eq_zero lean="PairReduction.card_finset_logSizeBallSeq_card_eq_zero" uses="def:logSizeBallSequence"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 For any log-size ball sequence $(V_i, t_i, r_i)_{i \in \mathbb{N}}$ for $(J, a, c, n)$, for all $k \ge \vert J \vert$, $V_k = \emptyset$.
 
 ### Proof {uses="lem:logSizeBallSequence_V_anti"}
@@ -440,8 +404,6 @@ For any log-size ball sequence $(V_i, t_i, r_i)_{i \in \mathbb{N}}$ for $(J, a, 
 $V_{i+1} = V_i \setminus B_{V_i}(t_i, (r_i - 1)c)$ and since $t_i \in B_{V_i}(t_i, (r_i - 1)c)$, we have $\vert V_{i+1} \vert < \vert V_i \vert$ and the cardinal eventually reaches $0$, in at most $\vert J \vert$ steps.
 
 ## Lemma: logSizeBallSequence_disjoint_B {#lem:logSizeBallSequence_disjoint_B lean="PairReduction.disjoint_smallBall_logSizeBallSeq" uses="def:logSizeBallSequence"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 For $i \ne j$, the balls $B_{V_i}(t, (r_i-1)c)$ and $B_{V_j}(t_j, (r_j-1)c)$ of a log-size ball sequence $(V_i, t_i, r_i)_{i \in \mathbb{N}}$ are disjoint.
 
@@ -454,15 +416,11 @@ This follows from the definition of $V_{i+1} = V_i \setminus B_{V_i}(t_i, (r_i-1
 
 ## Definition: pairSet {#def:pairSet lean="PairReduction.pairSet" uses="def:logSizeBallSequence"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $(V_i, t_i, r_i)_{i \in \mathbb{N}}$ be a log-size ball sequence for $(J, a, c, n)$.
 For $i \in \mathbb{N}$, let $K_i = \{t_i\} \times B_{V_i}(t_i, r_i c)$ be the set of pairs $(t_i, s)$ for $s$ in the ball $B_{V_i}(t_i, r_i c)$.
 We define $K = \bigcup_{i=0}^{\vert J \vert-1} K_i$, set of all pairs from the log-size ball sequence.
 
 ## Lemma: card_pairSet_le {#lem:card_pairSet_le lean="PairReduction.card_pairSet_le" uses="def:pairSet"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 The cardinal of the pair set $K$ of a log-size ball sequence for $(J, a, c, n)$ satisfies $|K| \le a |J|$.
 
@@ -495,8 +453,6 @@ We obtained the inequality $\vert K \vert \le a \vert J \vert$
 
 ## Lemma: dist_le_of_mem_pairSet {#lem:dist_le_of_mem_pairSet lean="PairReduction.edist_le_of_mem_pairSet" uses="def:pairSet"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $(s, t)$ be a pair in the pair set $K$ of a log-size ball sequence for $(J, a, c, n)$.
 Then $d_T(s, t) \le c n$.
 
@@ -513,8 +469,6 @@ $$
 The last inequality is from [logSizeRadius_logSizeBallSequence_le](#lem:logSizeRadius_logSizeBallSequence_le).
 
 ## Lemma: sup_dist_le_two_mul_sup_dist_pairSet {#lem:sup_dist_le_two_mul_sup_dist_pairSet lean="PairReduction.iSup_edist_pairSet" uses="def:pairSet"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Let $K$ be the pair set of a log-size ball sequence $(V_i, t_i, r_i)_{i \in \mathbb{N}}$ for $(J, a, c, n)$.
 Then for any function $f : T \to E$ with $(E,d_E)$ a metric space,
@@ -549,8 +503,6 @@ $$
 
 ## Lemma: pair_reduction {#lem:pair_reduction lean="EMetric.pair_reduction" uses="def:pairSet"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $(T,d_T)$ be a metric space.
 Let $J \subseteq T$ be finite, $a > 1$, $c>0$ and $n \in \{1, 2, ...\}$ such that $|J| \le a^n$.
 Then, there is $K \subseteq J^2$ such that for any function $f : T \to E$ with $(E,d_E)$ a metric space,
@@ -583,8 +535,6 @@ Equation (eq:chain3) was proved in [sup_dist_le_two_mul_sup_dist_pairSet](#lem:s
 
 ## Definition: Kolmogorov condition {#def:IsKolmogorovProcess lean="ProbabilityTheory.IsAEKolmogorovProcess"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $X : T \to \Omega \to E$ be a stochastic process, where $(T, d_T)$ and $(E, d_E)$ are pseudo-metric spaces and $(\Omega, \mathbb{P})$ is a measure space.
 Let $p, q > 0$.
 We say that $X$ satisfies the Kolmogorov condition for exponents $(p,q)$ with constant $M$ if for all $s, t \in T$, $(X_s, X_t)$ is $\mathbb{P}$-a.e. measurable for the Borel $\sigma$-algebra on $E^2$ and
@@ -600,8 +550,6 @@ Remark: the measurability condition on the pair would be implied by the measurab
 We follow [@kratschmer2023kolmogorov] and do not require separability.
 
 ## Lemma: IsKolmogorovProcess.edist_eq_zero {#lem:IsKolmogorovProcess.edist_eq_zero lean="ProbabilityTheory.IsAEKolmogorovProcess.edist_eq_zero" uses="def:IsKolmogorovProcess"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 If $X : T \to \Omega \to E$ is a process that satisfies the Kolmogorov condition for exponents $(p,q)$ with constant $M$ and $s, t \in T$ are such that $d_T(s, t) = 0$, then $\mathbb{P}$-a.e. $d_E(X_s, X_t) = 0$.
 
@@ -632,8 +580,6 @@ In particular the expectation of the supremum is $0$.
 
 ## Lemma: IsKolmogorovProcess.aemeasurable {#lem:IsKolmogorovProcess.aemeasurable lean="ProbabilityTheory.IsAEKolmogorovProcess.aemeasurable" uses="def:IsKolmogorovProcess"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 If $X : T \to \Omega \to E$ is a function that satisfies the Kolmogorov condition, then for all $t \in T$, $X_t$ is $\mathbb{P}$-a.e. measurable.
 
 ## Lemma: aemeasurable_pair_of_aemeasurable {#lem:aemeasurable_pair_of_aemeasurable lean="ProbabilityTheory.aemeasurable_pair_of_aemeasurable"}
@@ -641,8 +587,6 @@ If $X : T \to \Omega \to E$ is a function that satisfies the Kolmogorov conditio
 If $E$ is separable and $X : T \to \Omega \to E$ is a process such that $X_t$ is $\mathbb{P}$-a.e. measurable for all $t \in T$, then for all $s, t \in T$, the pair $(X_s, X_t)$ is $\mathbb{P}$-a.e. measurable for the Borel $\sigma$-algebra on $E^2$.
 
 ## Lemma: IsKolmogorovProcess.aemeasurable_edist {#lem:IsKolmogorovProcess.aemeasurable_edist lean="ProbabilityTheory.IsAEKolmogorovProcess.aemeasurable_edist" uses="def:IsKolmogorovProcess"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 If $X : T \to \Omega \to E$ is a process that satisfies the Kolmogorov condition, then for all $s,t \in T$ the function $\omega \mapsto d_E(X_s(\omega), X_t(\omega))$ is $\mathbb{P}$-a.e. measurable.
 

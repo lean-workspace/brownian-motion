@@ -39,8 +39,6 @@ Obvious.
 
 ## Lemma: map_eq_of_modification {#lem:map_eq_of_modification lean="ProbabilityTheory.map_eq_of_forall_ae_eq" uses="def:modification"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $X, Y : T \to \Omega \to E$ be two stochastic processes that are modifications of each other.
 Then for all $t_1, \ldots, t_n \in T$, the random vector $(X_{t_1}, \ldots, X_{t_n})$ has the same distribution as the random vector $(Y_{t_1}, \ldots, Y_{t_n})$.
 That is, $X$ and $Y$ have same finite-dimensional distributions.
@@ -51,8 +49,6 @@ By the modification property, almost surely $X_{t_i} = Y_{t_i}$ for all $i \in [
 Thus the function $\omega \mapsto (X_{t_1}(\omega), \ldots, X_{t_n}(\omega))$ is equal to $\omega \mapsto (Y_{t_1}(\omega), \ldots, Y_{t_n}(\omega))$ almost surely, hence the maps of $\mathbb{P}$ by these two functions are equal.
 
 ## Lemma: map_eq_iff {#lem:map_eq_iff lean="ProbabilityTheory.map_eq_iff_forall_finset_map_restrict_eq" uses="def:processLaw"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Let $X, Y : T \to \Omega \to E$ be two stochastic processes.
 Then $X$ and $Y$ have same finite-dimensional distributions if and only if they have the same law.

@@ -65,14 +65,10 @@ Therefore this is an elementary predictable set.
 
 ## Definition: lowerCrossingTimeAux {#def:lowerCrossingTimeAux lean="MeasureTheory.lowerCrossingTimeAux" uses="def:hittingBtwn"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $X : T \to \Omega \to \mathbb{R}$ be a stochastic process, $t \in T$, and $a, b \in \mathbb{R}$.
 The auxiliary lower crossing time $\sigma'_{a, s, t}$ is the hitting time of the set $(-\infty, a]$ by the process $X$ between times $s$ and $t$.
 
 ## Definition: Upper crossing time {#def:upperCrossingTime lean="MeasureTheory.upperCrossingTime" uses="def:lowerCrossingTimeAux"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Let $X : T \to \Omega \to \mathbb{R}$ be a stochastic process, $t \in T$, and $a, b \in \mathbb{R}$.
 The $n$-th upper crossing time $\tau^n_{a, b, t}$ of the interval $[a, b]$ by $X$ before time $t$ is the hitting time of the set $[b, \infty)$ by $X$ after hitting the set $(-\infty, a]$ for the $n-1$-th time.
@@ -81,8 +77,6 @@ That is, $\tau^0_{a, b, t} = 0$, and for all $n$, $\tau^{n+1}_{a, b, t}$ is the 
 
 ## Definition: Lower crossing time {#def:lowerCrossingTime lean="MeasureTheory.lowerCrossingTime" uses="def:upperCrossingTime"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $X : T \to \Omega \to \mathbb{R}$ be a stochastic process, $t \in T$, and $a, b \in \mathbb{R}$.
 The $n$-th lower crossing time $\sigma^n_{a, b, t}$ of the interval $[a, b]$ by $X$ before time $t$ is the hitting time of the set $(-\infty, a]$ by $X$ after hitting the set $[b, \infty)$ for the $n$-th time.
 
@@ -90,21 +84,15 @@ That is, it is the hitting time of $(-\infty, a]$ by $X$ between $\tau^n_{a, b, 
 
 ## Definition: Upcrossings before time $t$ {#def:upcrossingsBefore lean="MeasureTheory.upcrossingsBefore" uses="def:upperCrossingTime"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $X : T \to \Omega \to \mathbb{R}$ be a stochastic process, $t \in T$, and $a, b \in \mathbb{R}$.
 The number of upcrossings $U_t[a, b]$ of the interval $[a, b]$ by $X$ before time $t$ is the largest $n$ such that $\tau^n_{a, b, t} < t$, or $\infty$ if there is no such largest $n$.
 
 ## Definition: Upcrossings {#def:upcrossings lean="MeasureTheory.upcrossings" uses="def:upcrossingsBefore"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $X : T \to \Omega \to \mathbb{R}$ be a stochastic process and $a, b \in \mathbb{R}$.
 The number of upcrossings $U[a, b]$ of the interval $[a, b]$ by $X$ is the supremum over $t \in T$ of the number of upcrossings $U_t[a, b]$ of $[a, b]$ by $X$ before time $t$.
 
 ## Lemma: tendsto_of_no_upcrossings {#lem:tendsto_of_no_upcrossings lean="tendsto_of_no_upcrossings" uses="def:upcrossings"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Let $u : \beta \to \alpha$, for $\alpha$ a densely ordered, conditionally complete linear order equipped with the order topology.
 Let $S$ be a dense subset of $\alpha$ and $f$ a filter of $\beta$.

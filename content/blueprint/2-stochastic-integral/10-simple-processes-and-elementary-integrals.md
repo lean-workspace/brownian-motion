@@ -9,30 +9,22 @@ tags:
 
 ## Definition: Semi-ring of sets {#def:semiRingOfSets lean="MeasureTheory.IsSetSemiring"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 A _semi-ring of sets_ $C$ is a family of sets containing $\emptyset$,
   stable by intersection and such that for all $s, t \in C$,
   $s \setminus t$ is equal to a disjoint union of finitely many sets in $C$ .
 
 ## Lemma: semiRingOfSets_of_intervals {#lem:semiRingOfSets_of_intervals lean="MeasureTheory.IsSetSemiring.Ioc" uses="def:semiRingOfSets"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 The family of intervals of the form $(s, t]$
   with $s < t$ in a linear order $T$ is a semi-ring of sets.
 
 ## Lemma: semiRingOfSets_disjoint_of_union {#lem:semiRingOfSets_disjoint_of_union lean="MeasureTheory.IsSetSemiring.disjointOfUnion_props" uses="def:semiRingOfSets"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Suppose that $C$ is a semi-ring of sets, and let $A_k \in C$, $k \in \{1, ..., n\}$ .
   Then there exists a family of pairwise disjoint sets $B_j \in C$, $j \in \{1, ..., m\}$,
   such that $\bigcup_{k=1}^n A_k = \bigcup_{j=1}^m B_j$ .
 
 ## Corollary: semiRingOfSets_subtractUnion {#cor:semiRingOfSets_subtractUnion lean="MeasureTheory.IsSetSemiring.exists_disjoint_finset_diff_eq" uses="def:semiRingOfSets"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Suppose that $C$ is a semi-ring of sets, and let
   $A_k \in C$, $k \in \{1, ..., n\}$, and $B\in C$ .
@@ -81,14 +73,10 @@ $$
 
 ## Definition: Ring of sets {#def:ringOfSets lean="MeasureTheory.IsSetRing"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 A _ring of sets_ $C$ is a family of sets containing $\emptyset$,
   stable by union and set difference (and thus also by intersection).
 
 ## Lemma: setRing_of_finiteUnions {#lem:setRing_of_finiteUnions lean="MeasureTheory.IsSetSemiring.isSetRing_supClosure" uses="def:semiRingOfSets, def:ringOfSets"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 If $C$ is a semi-ring of sets,
   then finite unions of elements of $C$ form a ring of sets, $D$ .

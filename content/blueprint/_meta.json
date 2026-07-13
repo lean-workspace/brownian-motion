@@ -6,20 +6,7 @@
       "type": "canvas",
       "title": "Dependency canvas"
     },
-    "01-characteristic-function-and-covariance",
-    "02-stochastic-processes",
-    "03-gaussian-distributions",
-    "04-projective-family-of-the-brownian-motion",
-    "05-kolmogorov-chentsov-theorem",
-    "06-brownian-motion",
-    "07-filtrations-processes-and-martingales",
-    "08-debut-theorem",
-    "09-local-martingales",
-    "10-simple-processes-and-elementary-integrals",
-    "11-modifications-with-cadlag-paths",
-    "12-doob-meyer-theorem",
-    "13-classes-of-martingales-and-related-processes",
-    "14-quasimartingales-and-measures-derived-from-processes",
-    "15-stochastic-integral"
+    "1-brownian-motion",
+    "2-stochastic-integral"
   ]
 }

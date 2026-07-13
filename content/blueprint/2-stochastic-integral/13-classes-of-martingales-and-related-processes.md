@@ -42,20 +42,14 @@ The large jump part of a process $X : T \to \Omega \to E$ at level $\varepsilon$
 
 ## Definition: Extended variation {#def:eVariationOn lean="eVariationOn"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 The (extended-real-valued) variation of a function $f : T \to E$ on a set $s$ inside a linear order is the supremum of $\sum_i \mathrm{edist}(f(u_{i+1}, f(u_i)))$ over all finite increasing sequences $u : N \to T$ in $s$.
 We denote it by $V_f(s)$ .
 
 ## Definition: Bounded variation {#def:BoundedVariationOn lean="BoundedVariationOn" uses="def:eVariationOn"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 A function $f : T \to E$ is of bounded variation on a set $s$ if its variation $V_f(s)$ is finite.
 
 ## Definition: Locally bounded variation {#def:LocallyBoundedVariationOn lean="LocallyBoundedVariationOn" uses="def:BoundedVariationOn"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 A function $f : T \to E$ is of locally bounded variation on a set $s$ if for every $a, b$ in $s$, the variation $V_f(s \cap [a, b])$ is finite.
 

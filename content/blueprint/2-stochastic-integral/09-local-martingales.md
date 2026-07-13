@@ -57,15 +57,11 @@ $$
 
 ## Definition: Local property {#def:locally lean="ProbabilityTheory.Locally, ProbabilityTheory.Locally.localSeq" uses="def:localizingSequence, def:stoppedProcess"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $P$ be a class of stochastic processes (or equivalently a predicate on stochastic processes).
 We say that a stochastic process $X : T \to \Omega \to E$ is locally in $P$ (or satisfies $P$ locally) if there exists a localizing sequence $(\tau_n)_{n \in \mathbb{N}}$ such that for all $n \in \mathbb{N}$, the process $X^{\tau_n}\mathbb{I}_{\tau_n > 0}$ is in $P$ (in which $X^{\tau_n}$ denotes the stopped process).
 We denote the class of processes that are locally in $P$ by $P_{\mathrm{loc}}$.
 
 ## Lemma: implies_locally {#lem:implies_locally lean="ProbabilityTheory.Locally.of_prop" uses="def:locally"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 For any class of processes $P$, we have $P \subseteq P_{\mathrm{loc}}$.
 
@@ -74,8 +70,6 @@ For any class of processes $P$, we have $P \subseteq P_{\mathrm{loc}}$.
 Take $\tau_n = \infty$ for all $n$.
 
 ## Lemma: locally_mono {#lem:locally_mono lean="ProbabilityTheory.Locally.mono" uses="def:locally"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 If $P \subseteq Q$ then $P_{\mathrm{loc}} \subseteq Q_{\mathrm{loc}}$.
 
@@ -88,19 +82,13 @@ Thus $X \in Q_{\mathrm{loc}}$.
 
 ## Definition: stable {#def:stable lean="ProbabilityTheory.IsStable" uses="def:locally"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 A class of stochastic processes $P$ is stable if whenever $X$ is in $P$, then for any stopping time $\tau$, the process $X^{\tau}\mathbb{I}_{\tau > 0}$ is also in $P$.
 
 ## Lemma: isStable_locally {#lem:isStable_locally lean="ProbabilityTheory.IsStable.locally" uses="def:locally, def:stable"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 If $P$ is a stable class of processes, then $P_{\mathrm{loc}}$ is also stable.
 
 ## Lemma: locally_inter {#lem:locally_inter lean="ProbabilityTheory.IsStable.and" uses="def:locally, def:stable"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 If $P, Q$ are stable classes of processes then $(P\cap Q)_{\mathrm{loc}} = P_{\mathrm{loc}}\cap Q_{\mathrm{loc}}$.
 
@@ -118,8 +106,6 @@ Similarly, by the stability of $Q$, $X^{\sigma_n \wedge \tau_n} \mathbb{I}_{\sig
 
 ## Lemma: locally_of_isPreLocalizingSequence {#lem:locally_of_isPreLocalizingSequence lean="ProbabilityTheory.IsStable.locally_of_isPreLocalizingSequence" uses="def:locally, def:localizingSequence, def:stable, lem:rightContinuous_basic, def:preLocalizingSequence"}
 
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
-
 Let $P$ be a stable class of processes and let $(\tau_n)_{n \in \mathbb{N}}$ be a pre-localizing sequence such that for all $n \in \mathbb{N}$, $X^{\tau_n}\mathbb{I}_{\tau_n > 0}$ is in $P$.
 If the filtration is right-continuous, then $X$ is locally in $P$.
 
@@ -128,8 +114,6 @@ If the filtration is right-continuous, then $X$ is locally in $P$.
 Using the localizing sequence defined by [isLocalizingSequence_of_isPreLocalizingSequence](#lem:isLocalizingSequence_of_isPreLocalizingSequence) suffices.
 
 ## Lemma: locally_locally {#lem:locally_locally lean="ProbabilityTheory.IsStable.locally_locally_iff" uses="def:locally, def:stable"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Suppose that the filtration is right-continuous.
 For any stable class of processes $P$, we have $(P_{\mathrm{loc}})_{\mathrm{loc}} = P_{\mathrm{loc}}$.
@@ -148,8 +132,6 @@ it remains to argue that by stability of $P$, $X^{\tau'_n}\mathbb{I}_{\tau'_n > 
 Indeed, this follows as $X^{\tau'_n}\mathbb{I}_{\tau'_n > 0} = ((X^{\tau_n}\mathbb{I}_{\tau_n > 0})^{\sigma_{n,k_n}}\mathbb{I}_{\sigma_{n,k_n} > 0})^{\tau'_n}\mathbb{I}_{\tau'_n > 0}$ where $(X^{\tau_n}\mathbb{I}_{\tau_n > 0})^{\sigma_{n,k_n}}\mathbb{I}_{\sigma_{n,k_n} > 0}$ is in $P$ by construction and $P$ is stable.
 
 ## Lemma: Local implication from global implication {#lem:local_induction lean="ProbabilityTheory.IsStable.locally_induction" uses="def:locally, def:stable"}
-
-_Upstream marks this `\mathlibok`: realized in mathlib itself._
 
 Suppose that the filtration is right-continuous.
 Let $P, Q$ be two classes of stochastic processes such that $P \subseteq Q_{\mathrm{loc}}$ and $Q$ is stable.
