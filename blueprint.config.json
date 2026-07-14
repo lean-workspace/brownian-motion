@@ -7,13 +7,8 @@
         "type": "dir"
       },
       "pageMode": "chapter",
-      "lakeRoots": [
-        "BrownianMotion"
-      ],
-      "leanSrcDirs": [
-        ".lake/packages/BrownianMotion",
-        "vendor/upstream"
-      ],
+      "lakeRoots": ["BrownianMotion"],
+      "leanSrcDirs": [".lake/packages/BrownianMotion", "vendor/upstream"],
       "repo": "RemyDegenne/brownian-motion"
     }
   ]
