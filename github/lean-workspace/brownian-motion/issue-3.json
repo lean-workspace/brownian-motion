@@ -1,0 +1,39 @@
+{
+  "author": {
+    "is_bot": true,
+    "login": "app/sepo-agent-app"
+  },
+  "body": "Use this issue to track Sepo setup for this repository.\n\nThe latest setup status is maintained in the comment below.\n",
+  "closedAt": null,
+  "comments": [
+    {
+      "id": "IC_kwDOTWyAes8AAAABJ1s36Q",
+      "author": {
+        "login": "sepo-agent-app"
+      },
+      "authorAssociation": "NONE",
+      "body": "<!-- sepo-agent-onboarding-check -->\n## Sepo setup status\n\n### Current status\n\n- [x] GitHub App/auth: resolved via `oidc_broker`\n- [ ] Model credentials: not configured\n  - Add `OPENAI_API_KEY`, `CLAUDE_CODE_OAUTH_TOKEN`, or `ANTHROPIC_API_KEY` in [repository Actions secrets](https://github.com/lean-workspace/brownian-motion/settings/secrets/actions).\n  - Optional: configure `AGENT_DEFAULT_PROVIDER`.\n- [ ] Memory: not initialized\n  - Run **[Actions > Agent / Memory / Initialization](https://github.com/lean-workspace/brownian-motion/actions/workflows/agent-memory-bootstrap.yml)**.\n- [ ] Rubrics: not initialized\n  - Optional: run **[Actions > Agent / Rubrics / Initialization](https://github.com/lean-workspace/brownian-motion/actions/workflows/agent-rubrics-initialization.yml)**.\n\n### Remaining setup\n\n- [ ] Configure one model provider credential in [repository Actions secrets](https://github.com/lean-workspace/brownian-motion/settings/secrets/actions).\n- [ ] Run [Agent / Memory / Initialization](https://github.com/lean-workspace/brownian-motion/actions/workflows/agent-memory-bootstrap.yml) to initialize memory branch `agent/memory`.\n- [ ] Optional: run [Agent / Rubrics / Initialization](https://github.com/lean-workspace/brownian-motion/actions/workflows/agent-rubrics-initialization.yml) to initialize rubrics branch `agent/rubrics`.\n\n### Test Sepo\n\nAfter setup, try:\n\n```md\n@sepo-agent /answer Is Sepo configured correctly in this repository?\n```\n\nTry implementation:\n\n```md\n@sepo-agent /implement Create a small README update that verifies the agent can open a PR.\n```\n\nOn an open pull request:\n\n```md\n@sepo-agent /review\n```\n\nLast checked: [GitHub Actions run](https://github.com/lean-workspace/brownian-motion/actions/runs/29230333428)\n",
+      "createdAt": "2026-07-13T06:56:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/lean-workspace/brownian-motion/issues/3#issuecomment-4955256809",
+      "viewerDidAuthor": true
+    }
+  ],
+  "createdAt": "2026-07-13T06:56:29Z",
+  "labels": [
+    {
+      "id": "LA_kwDOTWyAes8AAAACrdoUkw",
+      "name": "agent",
+      "description": "Handled by the agent",
+      "color": "0e8a16"
+    }
+  ],
+  "number": 3,
+  "state": "OPEN",
+  "title": "Sepo setup check",
+  "updatedAt": "2026-07-13T06:56:31Z",
+  "url": "https://github.com/lean-workspace/brownian-motion/issues/3"
+}
