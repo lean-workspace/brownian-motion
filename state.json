@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "repo_slug": "lean-workspace/brownian-motion",
-  "last_sync_at": "2026-07-22T03:42:28Z",
+  "last_sync_at": "2026-07-22T08:42:31Z",
   "last_activity_at": "2026-07-20T12:22:16Z",
   "cursors": {
-    "issues": "2026-07-22T03:42:28Z",
-    "pulls": "2026-07-22T03:42:28Z",
-    "discussions": "2026-07-22T03:42:28Z",
-    "commits": "2026-07-22T03:42:28Z"
+    "issues": "2026-07-22T08:42:31Z",
+    "pulls": "2026-07-22T08:42:31Z",
+    "discussions": "2026-07-22T08:42:31Z",
+    "commits": "2026-07-22T08:42:31Z"
   },
-  "last_run_url": "https://github.com/lean-workspace/brownian-motion/actions/runs/29889115780",
+  "last_run_url": "https://github.com/lean-workspace/brownian-motion/actions/runs/29905013598",
   "created_at": "2026-07-15T03:31:00.075Z",
-  "updated_at": "2026-07-22T03:42:32.911Z"
+  "updated_at": "2026-07-22T08:42:35.398Z"
 }
