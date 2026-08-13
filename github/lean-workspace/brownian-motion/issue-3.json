@@ -4,7 +4,7 @@
     "login": "app/sepo-agent-app"
   },
   "body": "Use this issue to track Sepo setup for this repository.\n\nThe latest setup status is maintained in the comment below.\n",
-  "closedAt": null,
+  "closedAt": "2026-08-13T09:52:34Z",
   "comments": [
     {
       "id": "IC_kwDOTWyAes8AAAABJ1s36Q",
@@ -20,6 +20,21 @@
       "reactionGroups": [],
       "url": "https://github.com/lean-workspace/brownian-motion/issues/3#issuecomment-4955256809",
       "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOTWyAes8AAAABOqN0Rg",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "Closing because this agent issue has had no activity for 30 days.",
+      "createdAt": "2026-08-13T09:52:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/lean-workspace/brownian-motion/issues/3#issuecomment-5278757958",
+      "viewerDidAuthor": false
     }
   ],
   "createdAt": "2026-07-13T06:56:29Z",
@@ -32,8 +47,8 @@
     }
   ],
   "number": 3,
-  "state": "OPEN",
+  "state": "CLOSED",
   "title": "Sepo setup check",
-  "updatedAt": "2026-07-13T06:56:31Z",
+  "updatedAt": "2026-08-13T09:52:34Z",
   "url": "https://github.com/lean-workspace/brownian-motion/issues/3"
 }
